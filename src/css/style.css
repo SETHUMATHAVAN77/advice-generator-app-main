@@ -1,0 +1,183 @@
+/*
+=============== 
+Variables
+===============
+*/
+
+:root {
+  /* dark shades of primary color*/
+  --clr-primary-1: hsl(205, 86%, 17%);
+  --clr-primary-2: hsl(205, 77%, 27%);
+  --clr-primary-3: hsl(205, 72%, 37%);
+  --clr-primary-4: hsl(205, 63%, 48%);
+  /* primary/main color */
+  --clr-primary-5: hsl(205, 78%, 60%);
+  /* lighter shades of primary color */
+  --clr-primary-6: hsl(205, 89%, 70%);
+  --clr-primary-7: hsl(205, 90%, 76%);
+  --clr-primary-8: hsl(205, 86%, 81%);
+  --clr-primary-9: hsl(205, 90%, 88%);
+  --clr-primary-10: hsl(205, 100%, 96%);
+  /* darkest grey - used for headings */
+  --clr-grey-1: hsl(209, 61%, 16%);
+  --clr-grey-2: hsl(211, 39%, 23%);
+  --clr-grey-3: hsl(209, 34%, 30%);
+  --clr-grey-4: hsl(209, 28%, 39%);
+  /* grey used for paragraphs */
+  --clr-grey-5: hsl(210, 22%, 49%);
+  --clr-grey-6: hsl(209, 23%, 60%);
+  --clr-grey-7: hsl(211, 27%, 70%);
+  --clr-grey-8: hsl(210, 31%, 80%);
+  --clr-grey-9: hsl(212, 33%, 89%);
+  --clr-grey-10: hsl(210, 36%, 96%);
+  --clr-white: #fff;
+  --clr-red-dark: hsl(360, 67%, 44%);
+  --clr-red-light: hsl(360, 71%, 66%);
+  --clr-green-dark: hsl(125, 67%, 44%);
+  --clr-green-light: hsl(125, 71%, 66%);
+  --clr-black: #222;
+  --transition: all 0.3s linear;
+  --spacing: 0.1rem;
+  --radius: 0.25rem;
+  --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+  --max-width: 1170px;
+  --fixed-width: 450px;
+  --clr-orange-1: hsl(12, 83%, 98%);
+  --clr-orange-2: hsl(14, 91%, 95%);
+  --clr-orange-3: hsl(12, 89%, 89%);
+  --clr-orange-4: hsl(13, 87%, 82%);
+  --clr-orange-5: hsl(13, 88%, 68%);
+  --clr-orange-6: hsl(13, 88%, 55%);
+  --clr-orange-7: hsl(13, 74%, 49%);
+  --clr-orange-8: hsl(13, 74%, 33%);
+  --clr-orange-9: hsl(13, 73%, 25%);
+  --clr-orange-10: hsl(13, 73%, 16%);
+}
+/*
+=============== 
+Global Styles
+===============
+*/
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap");
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --clr-Light-Cyan: #cee3e9;
+  --clr-Neon-Green: #52ffa8;
+  --clr-Grayish-Blue: #4e5d73;
+  --clr-Dark-Grayish-Blue: #323a49;
+  --clr-Dark-Blue: #1f2632;
+  --box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25),
+    -2px -2px 2px rgba(0, 0, 0, 0.25);
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+  background-color: var(--clr-Dark-Blue);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+/* main card */
+.main-card {
+  width: 90%;
+  padding: 1.75rem 1.5rem 3rem 1.5rem;
+  text-align: center;
+  border-radius: 10px;
+  background-color: var(--clr-Dark-Grayish-Blue);
+}
+
+h5 {
+  color: var(--clr-Neon-Green);
+  letter-spacing: 3px;
+}
+
+p {
+  color: var(--clr-Light-Cyan);
+  font-size: 1.5rem;
+  margin-bottom: 1.8rem;
+}
+
+/* loader */
+.spinner {
+  width: 30px;
+  height: 30px;
+  margin: -0.75rem auto 1.25rem auto;
+  border-radius: 50%;
+  background: radial-gradient(farthest-side, #52ffa8 94%, #0000) top/9px 9px
+      no-repeat,
+    conic-gradient(#0000 30%, #52ffa8);
+  -webkit-mask: radial-gradient(farthest-side, #0000 calc(100% - 9px), #000 0);
+  animation: spinner-c7wet2 1s infinite linear;
+}
+
+@keyframes spinner-c7wet2 {
+  100% {
+    transform: rotate(1turn);
+  }
+}
+
+/* dice img */
+.dice-img {
+  background-color: var(--clr-Neon-Green);
+  border-radius: 50%;
+  border: none;
+  padding: 1rem;
+  cursor: pointer;
+  transition: all 0.3s;
+  margin-top: -1.75rem;
+  margin-left: 12rem;
+}
+
+.dice-img:hover {
+  transition: all 0.3s;
+  box-shadow: 2px 2px 16px var(--clr-Neon-Green),
+    -2px -2px 16px var(--clr-Neon-Green);
+}
+
+.dice-img:active .dice {
+  animation: dice 0.3s linear infinite;
+}
+
+@keyframes dice {
+  from {
+    transform: rotate(0deg) scale(1);
+  }
+
+  to {
+    transform: rotate(360deg) scale(1.3);
+  }
+}
+
+@media screen and (min-width: 470px) {
+  .main-card {
+    width: 430px;
+  }
+}
